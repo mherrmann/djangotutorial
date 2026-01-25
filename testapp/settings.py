@@ -123,3 +123,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(" ")
+DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
