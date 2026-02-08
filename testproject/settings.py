@@ -126,3 +126,5 @@ import os
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 INSTALLED_APPS += ['testapp']
 DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
+DEBUG = os.getenv('DEBUG') == 'True'
+STATIC_ROOT = os.getenv('STATIC_ROOT')
