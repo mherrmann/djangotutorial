@@ -129,3 +129,5 @@ INSTALLED_APPS += ['testapp']
 CELERY_BROKER_URL = 'redis://localhost'
 CELERY_RESULT_BACKEND = 'redis://localhost'
 DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
+DEBUG = os.getenv('DEBUG') == 'True'
+STATIC_ROOT = os.getenv('STATIC_ROOT')
