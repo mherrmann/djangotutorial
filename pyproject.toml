@@ -1,0 +1,7 @@
+[project]
+name = "test"
+version = "0"
+dependencies = [
+    "django==5.1.2",
+    "gunicorn==24.1.1",
+]
