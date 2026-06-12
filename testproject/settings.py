@@ -132,3 +132,4 @@ DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default
 import json
 DATABASES['default'] = json.loads(os.environ['DB'])
 DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
+STATIC_ROOT = os.getenv('STATIC_ROOT')
