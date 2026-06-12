@@ -131,3 +131,4 @@ CELERY_RESULT_BACKEND = 'redis://localhost'
 DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
 import json
 DATABASES['default'] = json.loads(os.environ['DB'])
+DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
