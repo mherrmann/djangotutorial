@@ -126,3 +126,6 @@ import os
 DEBUG = os.getenv('DEBUG') == 'True'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 INSTALLED_APPS += ['testapp']
+import json
+if os.getenv('DB'):
+    DATABASES['default'] = json.loads(os.environ['DB'])
