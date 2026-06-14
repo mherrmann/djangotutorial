@@ -129,3 +129,11 @@ INSTALLED_APPS += ['testapp']
 CELERY_BROKER_URL = 'redis://localhost'
 CELERY_RESULT_BACKEND = 'redis://localhost'
 DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
+DATABASES['default'] = {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'djevopstest',
+    'USER': 'djevopstest',
+    'PASSWORD': os.environ['DB_PASSWORD'],
+    'HOST': 'localhost',
+    'PORT': 5432,
+}
