@@ -137,3 +137,4 @@ DATABASES['default'] = {
     'HOST': 'localhost',
     'PORT': 5432,
 }
+DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
