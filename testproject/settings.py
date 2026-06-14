@@ -138,3 +138,4 @@ DATABASES['default'] = {
     'PORT': 5432,
 }
 DATABASES['default']['NAME'] = os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME']
+STATIC_ROOT = os.getenv('STATIC_ROOT')
