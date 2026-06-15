@@ -144,3 +144,4 @@ DATABASES['default'] = {
     'ENGINE': 'django.db.backends.sqlite3',
     'NAME': os.getenv('SQLITE_DB_FILE') or DATABASES['default']['NAME'],
 }
+STATIC_ROOT = os.getenv('STATIC_ROOT')
