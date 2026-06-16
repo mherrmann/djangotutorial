@@ -132,3 +132,10 @@ DATABASES['default'] = {
     'ENGINE': 'django.db.backends.sqlite3',
     'NAME': os.getenv('SQLITE_DB_FILE')
 }
+DATABASES['default'] = {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'djevopstest1781604955',
+    'USER': 'djevopstest1781604955',
+    'PASSWORD': os.environ['DB_PASSWORD'],
+    'HOST': 'localhost',
+}
