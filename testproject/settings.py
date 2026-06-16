@@ -126,3 +126,10 @@ import os
 DEBUG = os.getenv('DEBUG') == 'True'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 INSTALLED_APPS += ['testapp']
+DATABASES['default'] = {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'djevopstest1781611639',
+    'USER': 'djevopstest1781611639',
+    'PASSWORD': os.environ['DB_PASSWORD'],
+    'HOST': 'localhost',
+}
