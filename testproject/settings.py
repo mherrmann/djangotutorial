@@ -128,3 +128,10 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 INSTALLED_APPS += ['testapp']
 CELERY_BROKER_URL = 'redis://localhost'
 CELERY_RESULT_BACKEND = 'redis://localhost'
+DATABASES['default'] = {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'djevopstest1781690081',
+    'USER': 'djevopstest1781690081',
+    'PASSWORD': os.environ['DB_PASSWORD'],
+    'HOST': 'localhost',
+}
