@@ -141,3 +141,7 @@ DATABASES['default'] = {
     'PASSWORD': os.environ['DB_PASSWORD'],
     'HOST': 'localhost',
 }
+DATABASES['default'] = {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': os.getenv('SQLITE_DB_FILE')
+}
