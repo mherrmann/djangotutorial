@@ -134,3 +134,10 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': 5.0,
     },
 }
+DATABASES['default'] = {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'djevopstest1787201286',
+    'USER': 'djevopstest1787201286',
+    'PASSWORD': os.environ['DB_PASSWORD'],
+    'HOST': 'localhost',
+}
