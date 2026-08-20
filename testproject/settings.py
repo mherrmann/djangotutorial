@@ -126,3 +126,11 @@ import os
 DEBUG = os.getenv('DEBUG') == 'True'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 INSTALLED_APPS += ['testapp']
+CELERY_BROKER_URL = 'redis://localhost'
+CELERY_RESULT_BACKEND = 'redis://localhost'
+CELERY_BEAT_SCHEDULE = {
+    'beat-check': {
+        'task': 'testapp.tasks.beat_task',
+        'schedule': 5.0,
+    },
+}
